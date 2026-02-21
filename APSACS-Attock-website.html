@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>APSACS Attock</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;cursor:pointer}
+.w3-half img:hover{opacity:1}
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background-image: url("https://i.ibb.co/mVWPCWKm/gptbackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .dark-green {
+    color: #145A32;
+}
+.footer-note {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;   
+    color: dark-grey;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;background-color:#145A32;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div> 
+  <img src="https://i.ibb.co/1t47xT2F/logo.png"
+    class="w3-right w3-circle"
+    style="width:180px;height:180px;object-fit:cover;margin-right:50px;">
+  </div>
+  <div class="w3-bar-block">
+   
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"></a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white">Campuses</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white">Facilities</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white">Categories</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="color:white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding" style="background-color:#145A32;">
+  <a href="javascript:void(0)" class="w3-button w3-white w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Why You Should Choose APSACS?</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Why You Should Choose APSACS ?</b></h1>
+    <p>Welcome to "Army Public School and College System", where curiosity meets breakthrough innovation. Founded on the principle of academic excellence, we empower the next generation of thinkers, creators, and leaders to challenge the status quo. From our world-class research facilities to our vibrant campus life, we provide the tools you need to turn your passion into a global impact. Your future starts here."</p>
+    <h1 class="w3-xxxlarge" style="color:#145A32"><b>Campuses.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://i.ibb.co/fY3BhS2W/Cambridge.png" style="width:100%" onclick="onClick(this)">
+      <img src="https://i.ibb.co/SD0vS3yc/junior.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="https://i.ibb.co/9kGmgnt0/ed.jpg" style="width:100%" onclick="onClick(this)">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://i.ibb.co/V0JLzPJR/stall.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="https://i.ibb.co/5WXqpYbc/boyscamp.jpg" style="width:100%" onclick="onClick(this)" >
+      
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge dark-green"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p><b>Standard Education:</b>A curriculum that meets national and international benchmarks, ensuring degrees are recognized and students are prepared for the global job market.<br>
+<b>Highly Qualified Teachers:</b>
+Expert faculty with advanced degrees and industry experience who provide high-quality instruction and professional mentorship.<br>
+ <b>Discipline:</b>
+A structured environment that promotes punctuality, ethics, and mutual respect, creating the ideal atmosphere for focused learning.<br>
+ <b>Extracurricular Activities:</b>
+Sports, clubs, and arts programs that build essential soft skills like leadership, teamwork, and time management.<br>
+<b>Veteran and Military Services:</b>
+Dedicated support systems tailored for military families, including transition assistance and specialized welfare programs.<br>
+<b>Technology and Print Services:</b>
+Access to high-speed internet, modern software, and professional printing facilities to support digital literacy and academic projects.</br>
+<b>Alumni Services:</b>
+A strong networking system that connects graduates with current students for mentorship, internships, and career opportunities.</p>
+       <div class="w3-half">
+       <img src="https://i.ibb.co/krz3VCn/hnor.jpg" style="width:90%" onclick="onClick(this)">
+       <img src="https://i.ibb.co/KcMf0HN9/honor.jpg" style="width:90%" onclick="onClick(this)">
+       </div>
+
+       <div class="w3-half">
+       <img src="https://i.ibb.co/prQ7w1wg/peeno.jpg" style="width:60%;height:80%" onclick="onClick(this)">
+       <img src="https://i.ibb.co/Pvwq2Qt3/cocur.png" style="width:80%" onclick="onClick(this)">
+       <img src="https://i.ibb.co/wbKxk3k/fogi.jpg"  style="width:80%" onclick="onClick(this)">
+       
+       </div>
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+       
+    <p>
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge dark-green"><b>Facilities.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p><b>Modern Classrooms:</b> Interactive spaces equipped with smart boards, high-quality audiovisual systems, and ergonomic furniture to enhance engagement.<br>
+<b>Specialized Laboratories:</b> State-of-the-art labs for science, computer science, and engineering to provide critical hands-on experience.<br>
+<b>Comprehensive Library:</b> A mix of quiet study areas and collaborative zones, providing access to extensive physical collections and digital databases/e-journals.<br>
+<b>Writing & Career Centers:</b> Dedicated offices for resume building, mock interviews, and academic guidance to prepare students for the workforce.<br>
+<b>Campus-wide Wi-Fi:</b> High-speed, reliable internet access across all academic and residential buildings.<br>
+<b>IT Support:</b> Help desks and computer labs available for students who need technical assistance or specialized software.<br>
+<b>Health Services:</b> An on-campus infirmary or clinic with qualified medical professionals for routine and emergency care.<br>
+<b>Mental Health Support:</b> Counseling services and wellness programs to assist students with stress and emotional well-being.<br>
+<b>Safety Measures:</b> 24/7 security personnel, CCTV surveillance, well-lit pathways, and emergency response systems.</p>
+        <img src="https://i.ibb.co/DgS18Gyx/chaat.png" style="width:50%" onclick="onClick(this)">
+        <div class="w3-half">
+        <img src="https://i.ibb.co/DfYNgRzC/complab.jpg" style="width:80%" onclick="onClick(this)">
+        </div>
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+   
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          
+         
+          
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        
+        <div class="w3-container">
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge dark-green"><b>Categories.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p>We empower students to choose an educational path that best aligns with their career aspirations. Whether pursuing the rigorous national standards of the Federal Board (FBISE) or the internationally recognized analytical framework of Cambridge (CAIE), our students receive a standardized, high-quality education under the oversight of APSACS or APSIS</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">National Stream</li>
+        <li class="w3-padding-16">Affiliated with FBISE</li>
+        <li class="w3-padding-16">Focuses on National Curriculum</li>
+        <li class="w3-padding-16">Leads to Matric and FSc</li>
+        <li class="w3-padding-16">Best for Local Universities and Armed Forces</li>
+        <li class="w3-padding-16">APSACS Standardized</li>
+        <li class="w3-padding-16">
+          
+        </li>
+        
+      
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="background-color:dark-green w3-xlarge w3-padding-32">International Stream</li>
+        <li class="w3-padding-16">Affiliated with Cambridge(CAIE)</li>
+        <li class="w3-padding-16">Focuses on Global Curriculum</li>
+        <li class="w3-padding-16">Leads to O-levels & A-Levels</li>
+        <li class="w3-padding-16">Best for International & Local Private Universities</li>
+        <li class="w3-padding-16">APSIS Specialized</li>
+        <li class="w3-padding-16">
+         
+          
+        </li>
+        
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge dark-green"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid green" class="w3-round">
+    <p>APS&C (Boys) Attock (PG-XII): 057-9316177<br><br>
+       APS (Girls) Attock (PG-XII): 057-2700787<br><br>
+       Army Public School Junior Attock: +92 57 9316364<br><br>
+       Location: Ghora Chowk, Attock Cantt, Pakistan<br><br>
+       Email (Junior Branch): apsjuniorattock@gmail.com<br><br>APSIS Phone: +92 57 2700787<br><br>
+        Email: info.apsis.attock@gmail.com<br><br>
+        Facebook Page: apsacattockcantt</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label></label>
+        
+      </div>
+      <div class="w3-section">
+        <label></label>
+        
+      </div>
+      <div class="w3-section">
+        <label></label>
+        
+      </div>
+      
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"> <a href="https://www.w3schools.com/w3css/default.asp" title=" target="_blank" class="w3-hover-opacity"></a></p></div>
+
+<div class="footer-note">Only for APSACS Attock</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
